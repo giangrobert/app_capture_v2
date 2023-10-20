@@ -27,7 +27,7 @@ class WelcomeWindow(QMainWindow):
         fondo.setGeometry(0, 0, 800, 600)  # Establecer el tamaño de la etiqueta al tamaño de la ventana
 
         # Cargar la imagen de fondo
-        fondo_imagen = QPixmap("D:/app_capture/src/imgs/bacground.jpg")
+        fondo_imagen = QPixmap("src/imgs/bacground.jpg")
         fondo.setPixmap(fondo_imagen)
 
         # Mensaje de "BIENVENIDOS"
@@ -41,7 +41,7 @@ class WelcomeWindow(QMainWindow):
         # Configurar una etiqueta para el GIF animado
         gif_label = QLabel(self)
         gif_label.setGeometry(0, 0, self.width(), self.height())
-        gif_movie = QMovie("D:/app_capture/src/imgs/infinity.gif")  
+        gif_movie = QMovie("src/imgs/infinity.gif")  
         gif_label.setMovie(gif_movie)
         gif_movie.start()
         gif_label.setAlignment(Qt.AlignBottom | Qt.AlignHCenter)
@@ -78,7 +78,7 @@ class MainWindow(QMainWindow):
         fondo.setGeometry(0, 0, self.width(), self.height())  # Ajustar al tamaño de la ventana
 
         # Cargar la imagen de fondo
-        fondo_imagen = QPixmap("D:/app_capture/src/imgs/bg2.png")  # Reemplaza con la ruta de tu imagen de fondo
+        fondo_imagen = QPixmap("src/imgs/bg2.png")  # Reemplaza con la ruta de tu imagen de fondo
         fondo_imagen = fondo_imagen.scaled(self.width(), self.height(), Qt.KeepAspectRatioByExpanding)
         fondo.setPixmap(fondo_imagen)
 
@@ -88,7 +88,7 @@ class MainWindow(QMainWindow):
         boton_cerrar.setGeometry(self.width() - 30, 10, 20, 20)  # Posición y tamaño del botón
         
     
-        icono_imagen = QPixmap("D:/app_capture/src/imgs/close.png")
+        icono_imagen = QPixmap("src/imgs/close.png")
         icono = QIcon(icono_imagen)
         boton_cerrar.setIcon(icono)
         boton_cerrar.setIconSize(icono_imagen.size())  
